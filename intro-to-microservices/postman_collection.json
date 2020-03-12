@@ -1,0 +1,194 @@
+{
+	"info": {
+		"_postman_id": "6ca2c5d3-64df-4f55-9b9e-4d4953c5852c",
+		"name": "introTask",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"test6@gmail.com\",\r\n    \"firstName\": \"Jeden\",\r\n    \"lastName\": \"Jedennn\",\r\n    \"creationDate\": \"Thu Feb 13 10:43:43 CET 2020\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users?",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "kuna@gmail.com",
+							"disabled": true
+						},
+						{
+							"key": "firstName",
+							"value": "Kuna",
+							"disabled": true
+						},
+						{
+							"key": "lastName",
+							"value": "Borsuk",
+							"disabled": true
+						},
+						{
+							"key": "creationDat",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/users?",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "firstName",
+							"value": "Jeden",
+							"disabled": true
+						},
+						{
+							"key": "lastName",
+							"value": "Kowalski",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "test6@gmail.com",
+							"disabled": true
+						},
+						{
+							"key": "orderBy",
+							"value": "firstName",
+							"disabled": true
+						},
+						{
+							"key": "offset",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "limit",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "id",
+							"value": "598730fa-5890-4eac-9280-4a6b3cc38903",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n            \"email\": \"test20@gmail.com\",\r\n            \"firstName\": \"Trzy\",\r\n            \"lastName\": \"Trzy\",\r\n            \"creationDate\": \"Thu Feb 13 10:43:43 CET 2020\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users?id=598730fa-5890-4eac-9280-4a6b3cc38903",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "firstName",
+							"value": "Skurwiel",
+							"disabled": true
+						},
+						{
+							"key": "id",
+							"value": "598730fa-5890-4eac-9280-4a6b3cc38903"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/users?id=598730fa-5890-4eac-9280-4a6b3cc38903",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "598730fa-5890-4eac-9280-4a6b3cc38903"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

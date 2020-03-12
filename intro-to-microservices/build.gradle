@@ -1,0 +1,44 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile(
+            [group: 'junit', name: 'junit', version: '4.12'],
+            [group: 'com.github.fakemongo', name: 'fongo', version: '2.1.0'],
+            [group: 'org.hamcrest', name: 'hamcrest-all', version: '1.3'],
+            [group: 'org.mockito', name: 'mockito-all', version: '1.10.19'],
+            [group: 'org.cthul', name: 'cthul-matchers', version: '1.0'],
+            //set lower version of mongo, because newer is not compatible with fongo
+            [group: 'org.mongodb', name: 'mongo-java-driver', version: '3.3.0'],
+            [group: 'org.mongodb.morphia', name: 'morphia-validation', version: '0.107'],
+            [group: 'ch.qos.logback', name: 'logback-classic', version: '1.1.7']
+    )
+   // compile group: 'org.springframework.data', name: 'spring-data-mongodb', version: '2.1.9.RELEASE'
+    compile 'io.dropwizard:dropwizard-core:0.9.3'
+    compile group: 'org.mongodb.morphia', name: 'morphia', version: '0.107'
+   // compile group: 'org.mongodb.morphia', name: 'morphia', version: '1.3.2'
+   // compile group: 'org.mongodb.morphia', name: 'morphia-validation', version: '0.107'
+    compile group: 'org.modelmapper', name: 'modelmapper', version: '0.7.5'
+    compile group: 'io.dropwizard', name: 'dropwizard-auth', version: '2.0.0'
+    compile group: 'io.dropwizard', name: 'dropwizard-client', version: '1.1.2'
+    compile group: 'org.json', name: 'json', version: '20090211'
+    compile 'org.quartz-scheduler:quartz:2.2.3'
+
+    // https://mvnrepository.com/artifact/io.github.openfeign/feign-core
+    compile group: 'io.github.openfeign', name: 'feign-core', version: '10.2.3'
+    // https://mvnrepository.com/artifact/com.netflix.feign/feign-gson
+    compile group: 'io.github.openfeign', name: 'feign-core', version: '10.2.3'
+    compile group: 'io.github.openfeign', name: 'feign-slf4j', version: '10.2.3'
+    compile group: 'io.github.openfeign', name: 'feign-okhttp', version: '10.2.3'
+    compile group: 'io.github.openfeign', name: 'feign-gson', version: '10.2.3'
+}
